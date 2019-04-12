@@ -1,0 +1,66 @@
+<!--
+  Написать калькулятор, похожий по функциональности на инженерный калькулятор
+  Windows. Не обязательно реализовывать все возможности калькулятора Windows.
+  В калькуляторе должно быть поле для ввода числа. Вводим первый операнд. 
+  После выбора действия вводим второй операнд. После нажатия = рассчитываем результат.
+  Наш калькулятор должен иметь возможнсть отступить на шаг назад, 
+  т.е. должна быть кнопка по нажатию которой отменяется последнее действие.
+  Также должна быть кнопка запоминающая результат в память и кнопка выводящая результат из памяти.
+  При чем можно запоминать много разных результатов, а доставая их из памяти нужно возвращать
+  последний внесенный.  
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="container">
+      <p>Калькулятор</p>
+
+      <label id="operand1Id"></label>&nbsp;&nbsp;
+      <label id="operationId"></label>&nbsp;&nbsp;
+      <label id="operand2Id"></label><br>
+      <input id="inputId" readonly />
+
+
+
+
+      <div class="container_btn">
+        <br>
+        <button class="btn" onclick="pressDigitBtn(this.innerText)">1</button>
+        <button class="btn" onclick="pressDigitBtn(this.innerText)">2</button>
+        <button class="btn" onclick="pressDigitBtn(this.innerText)">3</button><br>
+        <button class="btn" onclick="pressDigitBtn(this.innerText)">4</button>
+        <button class="btn" onclick="pressDigitBtn(this.innerText)">5</button>
+        <button class="btn" onclick="pressDigitBtn(this.innerText)">6</button><br>
+        <button class="btn" onclick="pressDigitBtn(this.innerText)">7</button>
+        <button class="btn" onclick="pressDigitBtn(this.innerText)">8</button>
+        <button class="btn" onclick="pressDigitBtn(this.innerText)">9</button><br>
+        <button class="btn" onclick="pressDigitBtn(this.innerText)">0</button>
+        <button class="btn operator" onclick="pressSignBtn(this.innerText)">+</button>
+        <button class="btn operator" onclick="pressSignBtn(this.innerText)">-</button><br>
+        <button class="btn" id="result" onclick="calculate()">=</button>
+        <button class="btn operator" onclick="pressSignBtn(this.innerText)">*</button>
+        <button class="btn operator" onclick="pressSignBtn(this.innerText)">/</button><br>
+        <button class="btn" onclick="pow()">pow</button>
+        <button class="btnTest" onclick="sin()">sin</button>
+        <button class="btn" id="c"onclick="pressSignBtn(this.innerText)">С</button>
+        <button class="btn" id="ce"onclick="pressSignBtn(this.innerText)">СE</button>
+        <button class="btn" id="decimal" onclick="pressSignBtn(this.innerText)">.</button>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="s1.js"></script>
+  <script src="s2.js"></script>
+  <script src="s3.js"></script>
+</body>
+
+</html>
